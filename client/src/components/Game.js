@@ -1,30 +1,34 @@
-import React from 'react'  
-import { Grid, Image } from 'semantic-ui-react';
+import React from 'react'
+import { Grid } from 'semantic-ui-react'
 import Board from './Board'
 import ScoreCard from './ScoreCard'
 
 const styles = {
-  fullHeight: { height: '100vh'},
-  board: { backgroundColor: '#AAFFAA'}, 
-  scores: { backgroundColor: '#9370DB'},
+  fullHeight: { height: '100vh' },
+  board: { backgroundColor: '#AAFFAA' },
+  scores: { backgroundColor: '#9370DB' },
 }
 
 const Game = () => (
   <Grid>
     <Grid.Row>
-      <Grid.Column 
+      <Grid.Column
         width={10}
-        style={{...styles.fullHeight, ...styles.board}}
+        style={{...styles.fullHeight, ...styles.board }}
       >
-      <Board/>
+        <Board />
       </Grid.Column>
-      <Grid.Column 
+      <Grid.Column
         width={6}
         style={{...styles.fullHeight, ...styles.scores}}
-        >
-          <ScoreCard/>
+      >
+        <ScoreCard />
       </Grid.Column>
     </Grid.Row>
   </Grid>
 )
+
 export default Game
+
+
+
